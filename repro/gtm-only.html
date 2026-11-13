@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Case B: your GTM container only (it contains the Google tag for the AW- ID and the conversion tags) -->
+<!-- Replace GTM-BBBBBBB with your GTM container ID -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-BBBBBBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repro B: GTM container only</title>
+<script src="check.js" defer></script>
+</head>
+<body>
+<h1>Repro B: GTM container only</h1>
+<p>Open with a fake click ID, e.g. <code>?gclid=TeSt_repro_b</code>, wait a few seconds, then press the button.</p>
+<p><label>Event name <input id="event" value="generate_lead"></label> <button id="fire">Push event and check</button></p>
+<pre id="out"></pre>
+</body>
+</html>

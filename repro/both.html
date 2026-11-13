@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Case A: Google tag snippet from Google Ads + your GTM container (both configure the same AW- ID) -->
+<!-- Replace GTM-AAAAAAA with the Google tag ID from Google Ads, GTM-BBBBBBB with your GTM container ID -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-AAAAAAA"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-BBBBBBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repro A: Google tag + GTM container</title>
+<script src="check.js" defer></script>
+</head>
+<body>
+<h1>Repro A: Google tag + GTM container</h1>
+<p>Open with a fake click ID, e.g. <code>?gclid=TeSt_repro_a</code>, wait a few seconds, then press the button.</p>
+<p><label>Event name <input id="event" value="generate_lead"></label> <button id="fire">Push event and check</button></p>
+<pre id="out"></pre>
+</body>
+</html>
